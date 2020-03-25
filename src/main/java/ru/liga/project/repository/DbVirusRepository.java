@@ -7,12 +7,12 @@ import java.util.List;
 
 import static java.util.Arrays.asList;
 
-public class DbRepository implements VirusRepository {
+public class DbVirusRepository implements VirusRepository {
     private final String jdbcurl;
     private final String login;
     private final String pass;
 
-    public DbRepository(String jdbcurl, String login, String pass) {
+    public DbVirusRepository(String jdbcurl, String login, String pass) {
         this.jdbcurl = jdbcurl;
         this.login = login;
         this.pass = pass;

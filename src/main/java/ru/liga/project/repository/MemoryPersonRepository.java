@@ -6,7 +6,7 @@ import java.util.List;
 
 import static java.util.Arrays.asList;
 
-public class MemoryRepository implements PersonRepository {
+public class MemoryPersonRepository implements PersonRepository {
     @Override
     public List<Person> findAll() {
         return asList(
