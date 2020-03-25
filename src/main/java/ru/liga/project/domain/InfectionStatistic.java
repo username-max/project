@@ -2,12 +2,19 @@ package ru.liga.project.domain;
 
 
 import lombok.AllArgsConstructor;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
-@AllArgsConstructor
+@Component
 public class InfectionStatistic {
     private final InfectionModelling infectionModelling;
+
+    @Autowired
+    public InfectionStatistic(InfectionModelling infectionModelling) {
+        this.infectionModelling = infectionModelling;
+    }
 
     public void tryNTimesAndPrint(long n) {
         for (int i = 0; i < n; i++) {
